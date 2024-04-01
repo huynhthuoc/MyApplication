@@ -1,5 +1,151 @@
+@import "../../../../src/style/variabels";
 .products {
-    overflow: hidden;
     width: 100%;
     height: 100%;
+    .banners {
+        display: flex;
+        height: 45%;
+        width: 100%;
+        gap: 2rem;
+        .banner {
+            width: 70%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 1rem;
+                box-shadow: $boxShadowItem;
+            }
+        }
+        .description {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: space-between;
+
+            .description-title {
+                box-shadow: $boxShadowItem;
+                width: 100%;
+                height: 65%;
+                border-radius: 1rem;
+                padding: 2rem;
+                background-image: $brColorItem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h2 {
+                    font-size: 4rem;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font-size: 1.6rem;
+                }
+                .description-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    button {
+                        cursor: pointer;
+                        margin-top: 0.5rem;
+                        width: 30rem;
+                        height: 4rem;
+                        font-size: 2rem;
+                        font-weight: 900;
+                        border-radius: 1rem;
+                        padding: 0.5rem 2rem;
+                        background-image: $brColorItem;
+                        transition: 0.5s;
+                        border: none;
+                        &:hover {
+                            color: $primaryColor;
+                            outline: 2px solid $primaryColor;
+                        }
+                    }
+                }
+            }
+            .framework {
+                background-image: $brColorItem;
+                box-shadow: $boxShadowItem;
+                border-radius: 1rem;
+                height: 30%;
+                padding: 1rem;
+                overflow: hidden;
+                &:hover {
+                    h4 {
+                        color: $primaryColor;
+                        border-bottom: 2px solid $primaryColor;
+                    }
+                }
+                h4 {
+                    font-size: 3rem;
+                    text-align: center;
+                    border-bottom: 2px solid rgba(186, 176, 176, 0.5);
+                    margin-bottom: 0.5rem;
+                    transform: translateY(-0.5rem);
+                    color: rgba(186, 176, 176, 0.576);
+                    transition: 0.3s;
+                }
+                ul {
+                    display: flex;
+                    height: 100%;
+                    gap: 0.5rem;
+                    li {
+                        height: 5rem;
+                        width: 5rem;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slideShowProducts {
+        height: 40%;
+        width: 100%;
+        margin-top: 2rem;
+        position: relative;
+        // overflow-x: scroll;
+        border-radius: 2rem;
+        overflow: hidden;
+        ul {
+            position: absolute;
+            height: 100%;
+            width: auto;
+            display: flex;
+            gap: 1rem;
+            li {
+                transition: 0.3s;
+                height: 98%;
+                border-radius: 2rem;
+                width: 23rem;
+                overflow: hidden;
+                // border: 2px solid rgb(0, 0, 0);
+                cursor: pointer;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 0.3s;
+                }
+                &:hover {
+                    //style +
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .active {
+                //style +
+                box-shadow: 0px 5px $primaryColor;
+                width: 35rem;
+            }
+        }
+    }
 }

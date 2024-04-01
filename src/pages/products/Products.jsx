@@ -1,17 +1,10 @@
 import React from "react"
 
-import ShowProduct from "./ShowProduct"
-import { useStoreContext } from "~/store"
+import BannerProduct from "./BannerProduct"
 //style scss
 import "./style/products.scss"
 const Products = () => {
-    const [state, dispatch] = useStoreContext()
-
-    return (
-        <div className="products">
-            <ShowProduct product={state[0]} />
-        </div>
-    )
+    return <BannerProduct />
 }
 
 export default Products
