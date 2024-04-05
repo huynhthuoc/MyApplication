@@ -21,17 +21,17 @@ const BannerProduct = () => {
                         <p>{product.titles.title}</p>
 
                         <div className="description-btn">
-                            <button>
-                                Watch Deploy{" "}
+                            <a href="https://github.com/huynhthuoc/MyApp">
+                                Deploy{"-"}
                                 <ReactTyped
                                     strings={[
-                                        `<b>Vercel</b> <i class="fi fi-rr-triangle"></i>`,
+                                        `<i>Vercel</i> <i class="fi fi-rr-triangle"></i>`,
                                     ]}
                                     backSpeed={100}
                                     typeSpeed={100}
                                     loop={true}
                                 />
-                            </button>
+                            </a>
                         </div>
                     </div>
 

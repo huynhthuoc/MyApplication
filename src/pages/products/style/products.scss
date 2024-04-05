@@ -6,15 +6,16 @@
         display: flex;
         height: 45%;
         width: 100%;
-        gap: 2rem;
         .banner {
             width: 70%;
             height: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: $boxShadowItem;
             img {
-                width: 100%;
-                height: 100%;
+                width: 99.9%;
                 border-radius: 1rem;
-                box-shadow: $boxShadowItem;
+                height: 99.9%;
             }
         }
         .description {
@@ -22,9 +23,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-            justify-content: space-between;
-
+            z-index: 1;
             .description-title {
                 box-shadow: $boxShadowItem;
                 width: 100%;
@@ -35,8 +34,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                gap: 0.5rem;
                 h2 {
-                    font-size: 4rem;
+                    font-size: 3rem;
                     margin-bottom: 1rem;
                 }
                 p {
@@ -44,23 +44,25 @@
                 }
                 .description-btn {
                     display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    button {
+                    width: 100%;
+                    height: 100%;
+                    a {
                         cursor: pointer;
-                        margin-top: 0.5rem;
-                        width: 30rem;
+                        font-size: 2.2rem;
                         height: 4rem;
-                        font-size: 2rem;
-                        font-weight: 900;
-                        border-radius: 1rem;
-                        padding: 0.5rem 2rem;
-                        background-image: $brColorItem;
-                        transition: 0.5s;
-                        border: none;
+                        display: flex;
+                        align-items: center;
+                        transition: all 0.5s;
+                        width: auto;
+                        border-radius: 2rem;
+                        padding: 2.2rem;
+                        font-weight: 700;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-image: $brColorlgradient3;
+                        box-shadow: $boxShadowItem;
                         &:hover {
                             color: $primaryColor;
-                            outline: 2px solid $primaryColor;
                         }
                     }
                 }
@@ -69,7 +71,7 @@
                 background-image: $brColorItem;
                 box-shadow: $boxShadowItem;
                 border-radius: 1rem;
-                height: 30%;
+                height: 100%;
                 padding: 1rem;
                 overflow: hidden;
                 &:hover {
@@ -84,19 +86,22 @@
                     border-bottom: 2px solid rgba(186, 176, 176, 0.5);
                     margin-bottom: 0.5rem;
                     transform: translateY(-0.5rem);
-                    color: rgba(186, 176, 176, 0.576);
                     transition: 0.3s;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-image: $brColorlgradient3;
                 }
                 ul {
                     display: flex;
                     height: 100%;
                     gap: 0.5rem;
                     li {
-                        height: 5rem;
-                        width: 5rem;
+                        height: 4rem;
+                        width: 4rem;
+                        display: flex;
+                        align-items: center;
                         img {
                             width: 100%;
-                            height: 100%;
                             object-fit: contain;
                         }
                     }
@@ -110,9 +115,8 @@
         width: 100%;
         margin-top: 2rem;
         position: relative;
-        // overflow-x: scroll;
+        overflow-x: scroll;
         border-radius: 2rem;
-        overflow: hidden;
         ul {
             position: absolute;
             height: 100%;
@@ -126,24 +130,22 @@
                 width: 23rem;
                 overflow: hidden;
                 // border: 2px solid rgb(0, 0, 0);
+                box-shadow: $boxShadowItem;
                 cursor: pointer;
                 img {
-                    height: 100%;
+                    height: 99%;
                     width: 100%;
+                    border-radius: 2rem;
                     object-fit: cover;
                     transition: 0.3s;
                 }
                 &:hover {
                     //style +
-                    img {
-                        transform: scale(1.1);
-                    }
                 }
             }
 
             .active {
                 //style +
-                box-shadow: 0px 5px $primaryColor;
                 width: 35rem;
             }
         }
