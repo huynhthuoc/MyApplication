@@ -1,9 +1,7 @@
-import logoReact from "~/imgs/logoReact.png"
-import logoScss from "~/imgs/logoSass.svg"
 const initState = [
     {
         id: 0,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -13,7 +11,7 @@ const initState = [
     },
     {
         id: 1,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 1",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -23,7 +21,7 @@ const initState = [
     },
     {
         id: 2,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 1",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -33,7 +31,7 @@ const initState = [
     },
     {
         id: 3,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 1",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -43,7 +41,7 @@ const initState = [
     },
     {
         id: 4,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 2",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -53,7 +51,7 @@ const initState = [
     },
     {
         id: 5,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 2",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -63,7 +61,7 @@ const initState = [
     },
     {
         id: 6,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 2",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -73,7 +71,7 @@ const initState = [
     },
     {
         id: 7,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 2",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
@@ -83,7 +81,7 @@ const initState = [
     },
     {
         id: 8,
-        logos: [logoReact, logoScss, logoScss, logoScss],
+        logos: [],
         titles: {
             heading: "New Product 2",
             title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",

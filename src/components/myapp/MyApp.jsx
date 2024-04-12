@@ -1,6 +1,7 @@
 import React from "react"
 import "animate.css"
 
+import { getImageUrl } from "~/utils"
 //components
 import SideMenu from "./SideMenu"
 import Main from "./Main"
@@ -10,7 +11,17 @@ import "../../style/base.scss"
 
 const MyApp = () => {
     return (
-        <div className="myapp">
+        <div
+            style={{
+                backgroundImage: `url(${getImageUrl(
+                    "imgapp/backgroundApp.jpg",
+                )})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "100% 100%",
+            }}
+            className="myapp"
+        >
             <div className="container">
                 <SideMenu />
                 <Main />

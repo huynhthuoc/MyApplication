@@ -38,17 +38,13 @@ li {
     height: 100vh;
     width: 100%;
     color: $textColor;
-    background-image: $brColorlgradient2;
     padding: 3rem 3rem;
-
     .container {
         display: flex;
         height: 100%;
         width: 100%;
         gap: 2rem;
-        backdrop-filter: blur(5rem);
         border-radius: 2rem;
-        background-image: $brColorlgradient;
         overflow: hidden;
         overflow-y: hidden;
         box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.459);

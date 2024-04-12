@@ -3,16 +3,42 @@ import { ReactTyped } from "react-typed"
 
 import { useStoreContext } from "~/store"
 //style scss
+
 const BannerProduct = () => {
     const [state, dispatch] = useStoreContext()
     const [index, setIndex] = React.useState(0)
-
+    //assets
     const product = state[index]
+    const bannerRef = React.useRef()
+    const showBannerRef = React.useRef()
+
+    React.useEffect(() => {
+        //variabels scss
+        if (bannerRef.current !== "undefined") {
+            document.documentElement.style.setProperty(
+                "--widthBanner",
+                `${bannerRef.current.parentElement.clientHeight + "px"}`,
+            )
+
+            showBannerRef.current = setTimeout(() => {
+                if (bannerRef.current) {
+                    bannerRef.current.style.animation = `scrollY 7s linear infinite `
+                }
+            }, 2500)
+        }
+        return () => {
+            if (bannerRef.current) {
+                bannerRef.current.style.animation = ``
+                bannerRef.current.style.transform = `translateY(0px)`
+            }
+        }
+    }, [index])
+
     return (
         <div className="products">
             <div className="banners ">
                 <div className="banner">
-                    <img src={product.banner} alt="" />
+                    <img ref={bannerRef} src={product.banner} alt="" />
                 </div>
 
                 <div className="description">
