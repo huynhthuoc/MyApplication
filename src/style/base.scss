@@ -43,10 +43,10 @@ li {
         display: flex;
         height: 100%;
         width: 100%;
-        gap: 2rem;
         border-radius: 2rem;
         overflow: hidden;
         overflow-y: hidden;
-        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.459);
+        box-shadow: $boxShadowItem;
+        background-image: $brColorlgradient;
     }
 }

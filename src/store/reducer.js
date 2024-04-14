@@ -3,8 +3,8 @@ const initState = [
         id: 0,
         logos: [],
         titles: {
-            heading: "New Product",
-            title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
+            heading: "New Prod213213uct",
+            title: "Loremi iste dolorum? Blanditiis at suscipit dolor?",
             link: "https://my-app-huynhthuoc.vercel.app/",
         },
         banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgolBdeaXdt7hZ4G28YiA8shOCg4jkBg08uA&usqp=CAU",
@@ -14,7 +14,7 @@ const initState = [
         logos: [],
         titles: {
             heading: "New Product 1",
-            title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
+            title: "Lorem i amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
             link: "https://my-app-huynhthuoc.vercel.app/",
         },
         banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgolBdeaXdt7hZ4G28YiA8shOCg4jkBg08uA&usqp=CAU",

@@ -3,3 +3,96 @@
         @content;
     }
 }
+@mixin buttonWater {
+    transition: all 0.3s;
+    animation: warter 10s linear infinite;
+    border-top: 1px solid $primaryColor1;
+    box-shadow: $boxShadowItem;
+    @include keyframes(warter) {
+        0% {
+            border-top-left-radius: 90%;
+        }
+        10% {
+            border-bottom-right-radius: 90%;
+            border-top-left-radius: 2rem;
+        }
+        20% {
+            border-top-right-radius: 90%;
+            border-bottom-right-radius: 1rem;
+        }
+        30% {
+            border-bottom-left-radius: 90%;
+            border-top-right-radius: 2rem;
+        }
+        40% {
+            border-bottom-right-radius: 90%;
+            border-bottom-left-radius: 2rem;
+        }
+        50% {
+            border-top-right-radius: 90%;
+            border-bottom-right-radius: 2rem;
+        }
+        60% {
+            border-top-right-radius: 2rem;
+            border-bottom-left-radius: 90%;
+        }
+        70% {
+            border-bottom-left-radius: 2rem;
+            border-top-left-radius: 90%;
+        }
+        80% {
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 90%;
+        }
+        90% {
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 90%;
+        }
+        100% {
+            border-bottom-right-radius: 2rem;
+            border-top-left-radius: 90%;
+        }
+    }
+    &:hover {
+        color: $primaryColor;
+    }
+}
+//style item
+
+@mixin flexCenterItem {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+@mixin br-style-item {
+    position: relative;
+    border: 2px solid transparent;
+    background: $brColorlgradient;
+    background-clip: padding-box;
+    border-radius: 1rem;
+    &::after {
+        content: "";
+        border-radius: 1rem;
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        z-index: -1;
+        background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+    }
+}
+
+@mixin style-3d-item {
+    transform: rotateX(51deg) rotateZ(43deg);
+    transform-style: preserve-3d;
+    border-radius: 32px;
+    box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+
+    &:hover {
+        transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+        box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+            54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    }
+}

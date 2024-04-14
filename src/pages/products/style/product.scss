@@ -1,0 +1,10 @@
+@import "../../../../src/style/variabels";
+@import "../../../style/mixin";
+@import "./banner";
+@import "./productList";
+.product {
+    width: 100%;
+    height: calc(100% - $heightHeader);
+    display: grid;
+    grid-template-rows: 65% 35%;
+}
