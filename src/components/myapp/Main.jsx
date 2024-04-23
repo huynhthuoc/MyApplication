@@ -8,7 +8,7 @@ const Main = () => {
     const value = false
 
     return (
-        <div className="wrapper">
+        <div className="content">
             <ul
                 className={`${"layer"} ${
                     isActive

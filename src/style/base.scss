@@ -29,18 +29,14 @@ li {
     list-style-type: none;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .myapp {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     color: $textColor;
     padding: 3rem 3rem;
     .container {
-        display: flex;
+        display: grid;
+        grid-template-columns: 25rem calc(100% - 25rem);
         height: 100%;
         width: 100%;
         border-radius: 2rem;

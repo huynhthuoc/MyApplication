@@ -11,7 +11,7 @@ const SideMenu = () => {
     const [path, setPath] = React.useState(window.location.pathname)
     return (
         <div className="sidemenu">
-            <div className="logo flex">
+            <div className="logo">
                 <i className="fi fi-brands-wepik"></i>
                 <h2>STORAGE</h2>
             </div>

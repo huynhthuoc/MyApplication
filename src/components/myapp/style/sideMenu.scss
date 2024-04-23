@@ -8,16 +8,16 @@
     background-image: $brColorlgradient;
     height: 100%;
     .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         user-select: none;
         height: 80px;
-        display: flex;
         gap: 2rem;
         animation-duration: 1s;
         i {
             font-size: 6rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCenterItem;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-image: $brColorlgradient3;
