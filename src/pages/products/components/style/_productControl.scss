@@ -1,0 +1,145 @@
+@import "src/scss/mixin";
+@import "src/scss/variabels";
+
+.product-control {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 0.5rem;
+    padding: 2rem 12rem;
+
+    .control-btn {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 50%;
+        left: 0;
+
+        button {
+            padding: 0.7rem;
+            line-height: 2rem;
+            min-width: 10rem;
+            @include buttonWater;
+            transform: translateY(-50%);
+            font-weight: 900;
+            z-index: 5;
+            font-size: 1.8rem;
+        }
+    }
+
+    .product-control-titles {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .title-heading {
+            width: 50%;
+            height: 100%;
+
+            h2 {
+                transition: animation 0.5s;
+                animation-duration: 0.5s;
+                font-weight: 900;
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                flex: 1;
+            }
+        }
+
+        .product-control-slider {
+            height: 100%;
+            width: 50%;
+            @include flexCenterItem;
+            position: relative;
+
+            .slider-show-img {
+                position: absolute;
+                height: 140%;
+                width: 20rem;
+                transform: translate3d(0px, -2rem, 0px) scale3d(1, 1, 1)
+                    rotateX(51deg) rotateY(0deg) rotateZ(43deg) skew(0deg, 0deg);
+                border-radius: 3rem;
+                overflow: hidden;
+                z-index: 1;
+                border-right: 0.5rem solid $primaryColor1;
+                border-bottom: 0.5rem solid $primaryColor1;
+                box-shadow: $boxShadowItem;
+                transition: 0.5s animation;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            //run-aniamtion === show Animations
+            .run-aniamtion {
+                animation: openPublish ease-in-out 1s 1;
+
+                @include keyframes(openPublish) {
+                    0% {
+                        transform: translate3d(0px, 2rem, 0px) scale3d(1, 1, 1)
+                            rotateX(51deg) rotateY(0deg) rotateZ(43deg)
+                            skew(0deg, 0deg);
+                        border: none;
+                    }
+
+                    25% {
+                        transform: translate3d(0px, -3rem, 0px) scale3d(1, 1, 1)
+                            rotateX(51deg) rotateY(0deg) rotateZ(43deg)
+                            skew(0deg, 0deg);
+                    }
+
+                    50% {
+                        transform: translate3d(0px, -2rem, 0px) scale3d(1, 1, 1)
+                            rotateX(51deg) rotateY(0deg) rotateZ(43deg)
+                            skew(0deg, 0deg);
+                    }
+
+                    75% {
+                        transform: translate3d(0px, -3rem, 0px) scale3d(1, 1, 1)
+                            rotateX(51deg) rotateY(0deg) rotateZ(43deg)
+                            skew(0deg, 0deg);
+                    }
+
+                    100% {
+                        transform: translate3d(0px, -2rem, 0px) scale3d(1, 1, 1)
+                            rotateX(51deg) rotateY(0deg) rotateZ(43deg)
+                            skew(0deg, 0deg);
+                    }
+                }
+            }
+
+            .product-control-screencode {
+                position: absolute;
+                transform: translate3d(0px, 2rem, 0px) scale3d(1, 1, 1)
+                    rotateX(51deg) rotateY(0deg) rotateZ(43deg) skew(0deg, 0deg);
+                height: 140%;
+                width: 20rem;
+                border-radius: 3rem;
+                overflow: hidden;
+                box-shadow: 4px 2px 20px black;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                    display: block;
+                    animation: screenCode ease-in-out 5s infinite;
+                    @include keyframes(screenCode) {
+                        from {
+                            transform: translateY(-100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

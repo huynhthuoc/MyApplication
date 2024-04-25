@@ -1,7 +1,6 @@
-@import "../../../../src/style/variabels";
-@import "../../../style/mixin";
-@import "./banner";
-@import "./productList";
+@import "src/scss/mixin";
+@import "src/scss/variabels";
+@import "./components/style/index.scss";
 .product {
     width: 100%;
     height: calc(100% - $heightHeader);

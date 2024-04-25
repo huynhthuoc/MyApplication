@@ -1,11 +1,11 @@
-import React from "react"
-import { Routes, Route } from "react-router-dom"
-import { publicRouters } from "~/routers/index"
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { publicRouters } from "~/routers/index";
 //style css
-import "./style/main.scss"
+import "./style/main.scss";
 const Main = () => {
-    const [isActive, setIsActive] = React.useState()
-    const value = false
+    const [isActive, setIsActive] = React.useState();
+    const value = false;
 
     return (
         <div className="content">
@@ -76,18 +76,18 @@ const Main = () => {
             </header>
             <Routes>
                 {publicRouters.map((item) => {
-                    const Page = item.element
+                    const Page = item.element;
                     return (
                         <Route
                             key={item.path}
                             path={item.path}
                             element={<Page />}
                         />
-                    )
+                    );
                 })}
             </Routes>
         </div>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;

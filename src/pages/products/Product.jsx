@@ -1,16 +1,16 @@
-import React from "react"
+import React from "react";
 
-import Banner from "./Banner"
-import ProductList from "./ProductList"
+import Banner from "./components/Banner";
+import ProductControl from "./components/ProductControl";
 //style scss
-import "./style/product.scss"
+import "./product.scss";
 const Products = () => {
     return (
         <div className="product">
             <Banner />
-            <ProductList />
+            <ProductControl />
         </div>
-    )
-}
+    );
+};
 
-export default Products
+export default Products;

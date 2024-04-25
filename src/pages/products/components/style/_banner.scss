@@ -1,11 +1,11 @@
-@import "../../../../src/style/variabels";
-@import "../../../style/mixin";
+@import "src/scss/variabels";
 .product-banner {
     background-image: $brColorlgradient;
     border-radius: 2rem;
     box-shadow: $boxShadowItem;
     position: relative;
     overflow: hidden;
+
     .banner-header {
         display: flex;
         align-items: center;
@@ -13,9 +13,11 @@
         width: 100%;
         position: absolute;
         padding: 1rem 2rem;
+
         ul {
             gap: 2rem;
             display: flex;
+
             li {
                 padding: 0.7rem;
                 height: 100%;
@@ -26,13 +28,16 @@
                 cursor: pointer;
                 border-radius: 2rem;
                 transition: all 0.5s;
+
                 &:hover {
                     color: $primaryColor;
                     font-weight: 900;
                 }
+
                 @include buttonWater;
             }
         }
+
         h2 {
             font-weight: 900;
             font-size: 2rem;

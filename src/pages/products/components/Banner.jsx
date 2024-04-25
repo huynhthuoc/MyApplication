@@ -1,9 +1,7 @@
-import React from "react"
-import { ReactTyped } from "react-typed"
+import React from "react";
+import { ReactTyped } from "react-typed";
 
-//style scss
-import "./style/_banner.scss"
-const fakedatanav = ["GAME", "WEBSITE", "UTILS", "STYLE", "DESIGN"]
+const fakedatanav = ["All", "GAME", "WEBSITE", "UTILS", "STYLE", "DESIGN"];
 const Banner = () => {
     return (
         <div className="product-banner">
@@ -25,7 +23,7 @@ const Banner = () => {
                 </ReactTyped>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Banner
+export default Banner;
