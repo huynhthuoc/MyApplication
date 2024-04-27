@@ -3,23 +3,16 @@ import { useStoreContext } from "~/store";
 import { getImageUrl } from "~/utils";
 //components
 
-const ProductList = () => {
+const ProductList = ({ product, index, setIndex, setIsActive, isActive }) => {
     const [state] = useStoreContext();
-    const [index, setIndex] = React.useState(0);
-    const [isActive, setIsActive] = React.useState(false);
-
-    const product = React.useMemo(() => {
-        return state[index];
-    }, [state, index]);
 
     React.useEffect(() => {
         let clearActive;
         clearActive = setTimeout(() => {
             setIsActive("off");
         }, 1000);
-
         return () => clearTimeout(clearActive);
-    }, [isActive]);
+    });
 
     function handleClick(e) {
         if (isActive === "off") {
