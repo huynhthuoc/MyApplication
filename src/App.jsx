@@ -1,8 +1,10 @@
-import React from "react"
-//base CSS
-import { MyApp } from "~/components/myapp"
-const App = () => {
-    return <MyApp />
-}
+import React from "react";
 
-export default App
+import { MyApp } from "~/components";
+
+import "src/base.scss";
+const App = () => {
+    return <MyApp />;
+};
+
+export default App;

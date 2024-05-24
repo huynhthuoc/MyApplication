@@ -1,0 +1,43 @@
+@import "src/scss/_mixin.scss";
+@import "src/scss/_variabels.scss";
+
+.profile {
+    width: 30rem;
+    position: absolute;
+    top: 100%;
+    right: -50%;
+    margin: 1rem;
+    z-index: 1;
+    border-radius: 2rem;
+    background-color: $bgrItemHover;
+    padding: 1rem;
+
+    .profile_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3rem;
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        a,
+        span {
+            transition: 0.2s all;
+
+            i {
+                font-size: 1.7rem;
+                cursor: pointer;
+                transition: all 0.3s;
+                padding: 1rem;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+                color: $colorHover;
+                font-weight: 900;
+            }
+        }
+    }
+}

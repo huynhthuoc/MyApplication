@@ -1,6 +1,6 @@
 import React from "react";
 import { useStoreContext } from "~/store";
-import { getImageUrl } from "~/utils";
+import { getImageUrl } from "~/utils/utils";
 //components
 
 const ProductList = ({ product, index, setIndex, setIsActive, isActive }) => {
@@ -97,4 +97,4 @@ const ProductList = ({ product, index, setIndex, setIsActive, isActive }) => {
     );
 };
 
-export default ProductList;
+export default React.memo(ProductList);

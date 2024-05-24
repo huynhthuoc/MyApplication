@@ -27,4 +27,4 @@ const Products = () => {
     );
 };
 
-export default React.meno(Products);
+export default Products;

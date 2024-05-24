@@ -1,49 +1,40 @@
-import { getImageUrl } from "~/utils";
-
 const initState = [
     {
         id: 0,
-        logos: [],
-        titles: {
-            heading: "1",
-            title: "Loremi iste dolorum? Blanditiis at suscipit dolor?",
-            link: "https://my-app-huynhthuoc.vercel.app/",
+        avaURL: null,
+        firstName: "huynh",
+        lastName: "em",
+        country: "Viet Nam",
+        email: "huynhEm@gmail.com.vn",
+        isCheck: {
+            firstName: true,
+            lastName: true,
+            country: true,
+            email: true,
         },
-        banner: getImageUrl("imgapp/1.png"),
-    },
-    {
-        id: 1,
-        logos: [],
-        titles: {
-            heading: "2",
-            title: "Lorem i amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
-            link: "https://my-app-huynhthuoc.vercel.app/",
+        accounts: {
+            account: "admin1",
+            password: "admin1",
         },
-        banner: getImageUrl("imgapp/2.png"),
-    },
-    {
-        id: 2,
-        logos: [],
-        titles: {
-            heading: "3",
-            title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
-            link: "https://my-app-huynhthuoc.vercel.app/",
-        },
-        banner: getImageUrl("imgapp/3.png"),
-    },
-    {
-        id: 3,
-        logos: [],
-        titles: {
-            heading: "4",
-            title: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempore dignissimos. Doloribus, iusto error! Neque ad delectus quisquam? In veritatis, vero doloremque harum animi iste dolorum? Blanditiis at suscipit dolor?",
-            link: "https://my-app-huynhthuoc.vercel.app/",
-        },
-        banner: getImageUrl("imgapp/4.png"),
     },
 ];
 
-const reducer = function (state, action) {};
+const reducer = function (state, action) {
+    switch (action.type) {
+        case "UPDATE_USER":
+            return state.map((item) => {
+                if (item.id === action.id) {
+                    return {
+                        ...action.payload,
+                    };
+                } else {
+                    return item;
+                }
+            });
+        default:
+            throw new Error("invalid action");
+    }
+};
 
 export default reducer;
 export { initState };

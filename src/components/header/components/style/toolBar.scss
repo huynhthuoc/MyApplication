@@ -1,0 +1,41 @@
+@import "src/scss/_mixin.scss";
+@import "src/scss/_variabels";
+
+.toolBar {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    @include flexCenterItem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    a {
+        transition: all ease-in 0.2s;
+        display: block;
+        width: 95%;
+        height: 95%;
+        @include flexCenterItem;
+        background-color: $bgrItem;
+        border-radius: 1.2rem;
+        z-index: 2;
+        i {
+            transition: all ease-in 0.2s;
+            font-size: 2rem;
+            color: $textColor;
+            @include flexCenterItem;
+
+            opacity: 0.5;
+        }
+    }
+}
+.toolBar-active {
+    @include AnimationMelt;
+    a {
+        background-color: $bgrItemHover;
+
+        i {
+            opacity: 1;
+            color: $textColor;
+            transform: scale(1.1);
+        }
+    }
+}
