@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Context } from "./context";
+import { ContextDataApp } from "./context";
 
-export const useStoreContext = () => {
-    return useContext(Context);
+export const useContextData = () => {
+    return useContext(ContextDataApp);
 };

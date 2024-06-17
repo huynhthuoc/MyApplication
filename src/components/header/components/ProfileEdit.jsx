@@ -3,12 +3,14 @@ import { useRef, useMemo, useState } from "react";
 //components
 import Input from "~/utils/components/Input";
 import { dataCountries } from "~/store";
-import { getImageUrl } from "~/utils/utils";
 //style
 import "./style/profileEdit.scss";
+import Title from "~/utils/components/Title";
+import { useHoverTitle } from "~/utils/costumHooks/index";
 export default function ProfileEdit({ user, setUser }) {
     const [isOpenListContries, setIsOpenListCountries] = useState(false);
     const refInputOpenFile = useRef(null);
+    const { isHover, handlePointerEnter, handlePointerLeave } = useHoverTitle();
 
     const listCountries = useMemo(() => {
         return dataCountries.filter((item) => {
@@ -57,12 +59,14 @@ export default function ProfileEdit({ user, setUser }) {
         <>
             <div className="profile_edit">
                 <div className="profile_edit-img">
-                    <img
-                        src={user.avaURL || getImageUrl("imgapp/ava1.png")}
-                        alt=""
-                    />
-                    <span onClick={handleClickOpenFile}>
+                    <img src={user.avaURL} alt="" />
+                    <span
+                        onPointerMove={() => handlePointerEnter("update")}
+                        onPointerLeave={handlePointerLeave}
+                        onClick={handleClickOpenFile}
+                    >
                         <i className="fi fi-rr-camera"></i>
+                        {isHover && <Title title="update" />}
                     </span>
                     <input
                         onChange={handleChangeIMG}
@@ -71,6 +75,7 @@ export default function ProfileEdit({ user, setUser }) {
                         style={{ display: "none" }}
                     />
                 </div>
+
                 <div className="profile_edit-information">
                     <h3>Your information</h3>
                     <form>
@@ -133,7 +138,8 @@ export default function ProfileEdit({ user, setUser }) {
                                 {listCountries.length === 0 ? (
                                     <h2
                                         style={{
-                                            textAlign: "center",
+                                            margin: "0 auto",
+                                            display: "block",
                                         }}
                                     >
                                         Không tìm thấy quốc gia của bạn!

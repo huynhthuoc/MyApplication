@@ -23,6 +23,13 @@ const MyApp = () => {
     return (
         <div className="myapp">
             <Header />
+            <div
+                style={{
+                    height: "90vh",
+                }}
+            >
+                main contents
+            </div>
         </div>
     );
 };

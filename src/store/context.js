@@ -1,4 +1,3 @@
-import { createContext } from "react"
-const Context = createContext()
+import { createContext } from "react";
 
-export { Context }
+export const ContextDataApp = createContext();

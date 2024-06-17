@@ -1,14 +1,18 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { dataCountries } from "~/store";
+import Title from "./Title";
 const Input = ({ type, name, value, setUser, user }) => {
+    const [isHover, setIsHover] = useState(false);
+
     const isCountry = useMemo(() => {
         return dataCountries.some((item) => {
             return item.name.toLowerCase() === value.toLowerCase();
         });
     }, [value]);
 
+    //check regex input here
     useEffect(() => {
-        const regexName = /^[a-zA-ZÀ-ỹ\s]+$/u;
+        const regexName = /^[a-zA-ZÀ-ỹ\s\d]+$/u;
         const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
         switch (name) {
@@ -64,6 +68,7 @@ const Input = ({ type, name, value, setUser, user }) => {
     }, [value, name, isCountry, setUser]);
 
     function handleSetInput(event) {
+        setIsHover(true);
         setUser((prev) => {
             return {
                 ...prev,
@@ -71,15 +76,19 @@ const Input = ({ type, name, value, setUser, user }) => {
             };
         });
     }
+
     return (
         <>
+            {isHover && <Title title={name} />}
             <input
                 style={
                     !user.isCheck[name]
                         ? {
-                              boxShadow: "0px 2px red",
+                              boxShadow: "0px 1px red",
                           }
-                        : {}
+                        : {
+                              position: "relative",
+                          }
                 }
                 autoComplete="off"
                 type={type}
@@ -88,7 +97,19 @@ const Input = ({ type, name, value, setUser, user }) => {
                 value={value}
                 onChange={handleSetInput}
                 placeholder={name}
+                onClick={() => setIsHover(true)}
+                onBlur={() => setIsHover(false)}
             />
+
+            {!user.isCheck[name] && (
+                <p
+                    style={{
+                        padding: "0.5rem",
+                    }}
+                >
+                    {name} hơi kỳ kỳ, vui lòng kiểm tra lại!
+                </p>
+            )}
         </>
     );
 };

@@ -4,7 +4,16 @@
         @content;
     }
 }
-
+@mixin melt {
+    animation: melt 2s infinite;
+}
+@mixin animationMelt {
+    @include keyframes(melt) {
+        100% {
+            transform: rotate(220deg);
+        }
+    }
+}
 //style item
 @mixin AnimationMelt {
     &::before {
@@ -28,14 +37,9 @@
 @mixin boxShadow {
     box-shadow: 1px 2px 10px rgb(255, 253, 253);
 }
-
-@mixin melt {
-    animation: melt 2s infinite;
-}
-@mixin animationMelt {
-    @include keyframes(melt) {
-        100% {
-            transform: rotate(220deg);
-        }
+@mixin hoverItem {
+    &:hover {
+        color: $textColor1;
+        background-color: $brColorHover;
     }
 }

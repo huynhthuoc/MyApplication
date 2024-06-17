@@ -1,46 +1,50 @@
 @import "src/scss/_mixin.scss";
 .user {
     height: 5rem;
-    padding: 1rem;
     @include flexCenterItem;
     border-radius: 1rem;
-    background-color: $bgrItem;
-    gap: 1rem;
+    background-color: $brColorItem;
+    gap: 0.5rem;
     transition: 0.3s all;
     .user_search {
-        height: 4rem;
+        height: 4.5rem;
         width: min-content;
         position: relative;
         @include flexCenterItem;
         gap: 1rem;
         input {
-            width: 4rem;
-            height: 4rem;
-            padding: 0rem 4rem 0px 0.5rem;
+            width: 0px;
+            height: 100%;
+            padding: 0rem 4rem 0px 0rem;
             border-radius: 50%;
-            font-weight: 900;
+            font-weight: 700;
             transition: 0.2s all;
+            color: $textColor1;
+            &::placeholder {
+                color: $textColor;
+            }
         }
         i {
             position: absolute;
             right: 0;
             top: 0;
             @include flexCenterItem;
-            height: 4rem;
-            width: 4rem;
+            height: 4.5rem;
+            width: 4.5rem;
             font-size: 2rem;
-            opacity: 0.5;
             cursor: pointer;
         }
     }
     .user_avatar {
-        width: 4rem;
-        height: 4rem;
+        width: 100%;
+        height: 100%;
         @include flexCenterItem;
         position: relative;
+        margin-right: 0.5rem;
         .user_avatar-img {
-            width: 100%;
-            height: 100%;
+            width: 4.5rem;
+            height: 4.5rem;
+            object-fit: cover;
             cursor: pointer;
             img {
                 border-radius: 50%;
@@ -54,19 +58,17 @@
         input {
             position: relative;
             width: 30rem;
-            height: 2.3rem;
+            height: 100%;
             border-radius: 0.5rem;
-            background-color: $textColor;
-            padding: 0rem 5rem 0px 0.5rem;
+            background-color: $brColorItem;
+            padding: 0rem 5rem 0px 1rem;
         }
         i {
             transform: scale(1.1);
-            opacity: 1;
             border-radius: 50%;
-            height: 4rem;
-            width: 4rem;
-            background-color: $textColor;
-            color: $bgrItem;
+            height: 4.5rem;
+            width: 4.5rem;
+            color: $textColor1;
         }
     }
 }

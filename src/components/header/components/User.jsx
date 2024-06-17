@@ -1,11 +1,13 @@
 import { useState } from "react";
 //components
 import Profile from "./Profile";
-
+import { useContextData } from "~/store";
 //style
 import "./style/user.scss";
 const User = () => {
     const [open, setOpen] = useState(null);
+    const [user] = useContextData();
+    const [valueInput, setValueInput] = useState("");
 
     function setStateValue(value) {
         if (value !== open) {
@@ -15,6 +17,12 @@ const User = () => {
         }
     }
 
+    function handleClickOpenInput() {
+        setStateValue("open-search");
+        if (open !== "open-search") {
+            setValueInput("");
+        }
+    }
     return (
         <>
             <div className="user">
@@ -25,9 +33,14 @@ const User = () => {
                             : "user_search"
                     }
                 >
-                    <input type="text" placeholder="search..." />
+                    <input
+                        value={valueInput}
+                        onChange={(e) => setValueInput(e.target.value)}
+                        type="text"
+                        placeholder="Search..."
+                    />
                     <i
-                        onClick={() => setStateValue("open-search")}
+                        onClick={handleClickOpenInput}
                         className="fi fi-rs-search"
                     ></i>
                 </div>
@@ -37,10 +50,7 @@ const User = () => {
                         onClick={() => setStateValue("open-profile")}
                         className="user_avatar-img"
                     >
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRndayNZS1EvBQv6dYz7hj5jVgMhD0LMeu8bw&s"
-                            alt="user avatar"
-                        />
+                        <img src={user.avaURL} alt="user avatar" />
                     </div>
 
                     {open === "open-profile" ? (

@@ -2,38 +2,39 @@
 @import "src/scss/_variabels.scss";
 
 .profile_user {
-    display: flex;
+    width: 100%;
     align-content: center;
     gap: 1.8rem;
     width: 100%;
     margin-top: 2rem;
-    height: 11rem;
-
     img {
-        width: 11rem;
-        height: 11rem;
+        display: block;
+        width: 12rem;
+        height: 12rem;
+        object-fit: cover;
         border-radius: 50%;
+        margin: 0 auto;
     }
-
     .profile_user-information {
         width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         gap: 0.2rem;
-
         h3 {
-            font-size: 1.8rem;
-            font-weight: 900;
+            max-width: 100%;
+            overflow: hidden;
+            font-size: 2.3rem;
+            font-weight: 200;
         }
 
         p {
-            max-width: 16rem;
-            display: block;
-            font-weight: 500;
-            font-size: 1.4rem;
+            max-width: 100%;
             overflow: hidden;
-            text-overflow: ellipsis;
+            display: block;
+            font-weight: 100;
+            font-size: 1.2rem;
+            overflow: hidden;
         }
 
         button {
@@ -43,44 +44,38 @@
             @include flexCenterItem;
             gap: 1rem;
             padding: 0.67rem;
-            background-color: green;
             width: 10rem;
             border-radius: 0.7rem;
             font-size: 1.2rem;
-            color: white;
+            color: $textColor;
             font-weight: 500;
-            box-shadow: 0px 2px black;
+            box-shadow: 0px 1px $textColor1;
+            transition: 0.3s all;
+            @include hoverItem;
         }
     }
 }
 
-.profile_user-list {
+.profile_list {
     margin-top: 2rem;
     width: 100%;
     height: auto;
-
     li {
         display: flex;
         justify-content: space-between;
         transition: all 0.3s;
         border-radius: 0.5rem;
-
-        &:hover {
-            box-shadow: 0 3px $colorHover;
-            transform: translateY(-0.2rem);
-        }
-
+        @include hoverItem;
         i {
             @include flexCenterItem;
             font-size: 1.9rem;
         }
-
         a {
             display: flex;
             align-items: center;
             gap: 2rem;
             font-size: 1.5rem;
-            padding: 1rem;
+            padding: 0.5rem 0.3rem;
             flex: 1;
         }
     }

@@ -1,14 +1,15 @@
 import { useReducer } from "react";
-import { Context } from "./context";
-import reducer, { initState } from "./reducer";
+import { ContextDataApp } from "./context";
+import reducer, { userData } from "./reducer";
 
 function ProviderContext({ children }) {
-    const [state, dispatch] = useReducer(reducer, initState);
+    // const userData = dataApp[0]; // 1 hàm login và trả về thong tin cua user đó khớp với tài khoản mật khẩu và chuyển tiếp để render
+    const [user, dispatch] = useReducer(reducer, userData);
 
     return (
-        <Context.Provider value={[state, dispatch]}>
+        <ContextDataApp.Provider value={[user, dispatch]}>
             {children}
-        </Context.Provider>
+        </ContextDataApp.Provider>
     );
 }
 export default ProviderContext;
